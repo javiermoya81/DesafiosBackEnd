@@ -13,5 +13,15 @@
     "title": "parlantes",
     "Price": 900,
     "id": 3
+  },
+  {
+    "title": "mouse",
+    "price": "200",
+    "id": 4
+  },
+  {
+    "title": "gabinete",
+    "price": "10000",
+    "id": 5
   }
 ]
