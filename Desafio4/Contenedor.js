@@ -27,6 +27,18 @@ class contenedor{
         }
     }
 
+    async saveAll(id, producto){
+        try {
+            const contenidoFileJson = await fs.promises.readFile(this.file, 'utf-8')
+            let listadoProductos = JSON.parse(contenidoFileJson)
+            listadoProductos[id-1] = producto
+            await fs.promises.writeFile(this.file, JSON.stringify(listadoProductos, null, 2))
+        } 
+        catch (error) {
+            console.error('Se produjo un error:', error)
+        }
+    }
+
     async getById(id){   
         try {
             const contenidoFileJson = await fs.promises.readFile(this.file, 'utf-8')
